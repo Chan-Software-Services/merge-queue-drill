@@ -1,0 +1,15 @@
+# The merge queue drill's CI: one job, check, on every pull request to dev and on each trial
+# commit of dev's merge queue, which dev's ruleset requires.
+name: CI
+on:
+  pull_request:
+    branches: [dev]
+  merge_group:
+    types: [checks_requested]
+permissions: {}
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - run: echo "the merge queue drill's check"

@@ -1,0 +1,2 @@
+This repository is the scratch repository of agent-team's merge queue drill (tests/merge-queue-drill).
+It holds nothing but the drill's commits, and the drill refuses a repository whose dev lacks this file.
